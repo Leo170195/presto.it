@@ -35,10 +35,7 @@
                             <label class="mt-3" for="price"><h4>{{__('ui.price')}}</h4></label>
                             <input class="form-control my-2" type="number" name="price" value="{{old('price')}}">
                         </div>
-                        <div class="form-group ">
-                            <label class="mt-3 col-form-label" for="image"><h4>{{__('ui.pic')}}</h4></label>
-                            <div class="dropzone" id="drophere" name="image"></div>
-                        </div>
+                     
                         <button type="submit" class="btn font-weight-bold mt-3 btn-success">{{__('ui.submit')}}</button>
                     </form>
                     
