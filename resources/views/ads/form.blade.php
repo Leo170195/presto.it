@@ -15,16 +15,7 @@
                 <div class="col-12 col-md-4">
                     <form action="{{route('ads.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" name="uniqueSecret" value="{{ $uniqueSecret }}">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                        
                         <div>
                             <label class="mt-3" for="title"><h4>{{__('ui.title')}}</h4></label>
                         <input class="form-control my-2" type="text" name="title" value="{{old('title')}}">
@@ -59,16 +50,5 @@
             </div>
         </div>
     </section>
-    {{-- <script>
-        var CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
-    
-        Dropzone.autoDiscover = false;
-        var myDropzone = new Dropzone(".dropzone",{ 
-            maxFilesize: 3,  // 3 mb
-            acceptedFiles: ".jpeg,.jpg,.png,.pdf",
-        });
-        myDropzone.on("sending", function(file, xhr, formData) {
-           formData.append("_token", CSRF_TOKEN);
-        }); 
-    </script> --}}
+ 
 </x-layout>

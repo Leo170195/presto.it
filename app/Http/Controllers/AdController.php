@@ -65,9 +65,9 @@ class AdController extends Controller
     {
         $categories = Category::all();
 
-        $uniqueSecret = $request->old('uniqueSecret', base_convert(sha1(uniqid(mt_rand())), 16, 36));
+        // $uniqueSecret = $request->old('uniqueSecret', base_convert(sha1(uniqid(mt_rand())), 16, 36));
 
-        return view('ads.form', compact('categories', 'uniqueSecret'));
+        return view('ads.form', compact('categories'));
     }
 
     public function upload(Request $request)
